@@ -1,38 +1,24 @@
-# Azure CLI - AAD Graph to Microsoft Graph Migration Analysis
+# Azure CLI - AAD to MS Graph Migration: What Still Needs Work
 
-## Document Version
-- **Created**: 2024
-- **Branch**: resilv/aad-analysis
-- **Azure CLI Version**: 2.37.0+ (Microsoft Graph migration completed)
-- **Analysis Date**: Current
+**Migration Status**: Largely complete (v2.37.0, May 2022)  
+**Last Updated**: November 25, 2025
 
 ---
 
-## Executive Summary
+## Summary
 
-The Azure CLI successfully migrated from the deprecated Azure Active Directory (AAD) Graph API (`graph.windows.net`) to Microsoft Graph API (`graph.microsoft.com`) in version **2.37.0** released on May 24, 2022. This was a critical migration as AAD Graph reached end-of-support on June 30, 2022.
-
-### Migration Status: **LARGELY COMPLETE** ✅
-
-- **Primary Migration**: Complete (v2.37.0)
-- **GraphClient Implementation**: Fully functional
-- **Core Commands**: Migrated to Microsoft Graph
-- **Breaking Changes**: Documented and announced
-- **Remaining Issues**: 2 known open issues, legacy references for backward compatibility
+The migration from AAD Graph (`graph.windows.net`) to Microsoft Graph (`graph.microsoft.com`) is **functionally complete**. Most legacy references are **intentional for backward compatibility** and should NOT be removed.
 
 ---
 
-## Table of Contents
+## Code That Still Needs Updates
 
-1. [Migration Overview](#migration-overview)
-2. [Architecture Changes](#architecture-changes)
-3. [Code Requiring Updates](#code-requiring-updates)
-4. [Open GitHub Issues](#open-github-issues)
-5. [Legacy References Analysis](#legacy-references-analysis)
-6. [Test Infrastructure Updates](#test-infrastructure-updates)
-7. [Backward Compatibility](#backward-compatibility)
-8. [Recommendations](#recommendations)
-9. [References](#references)
+### 1. Help Text Update (Minor)
+**File**: `src/azure-cli/azure/cli/command_modules/synapse/manual/_params.py`  
+**Line**: 635  
+**Current**: `help='use with --assignee-object-id to avoid errors caused by propagation latency in AAD Graph')`  
+**Fix**: Change "AAD Graph" to "Microsoft Graph"  
+**Priority**: Low (cosmetic only)
 
 ---
 
