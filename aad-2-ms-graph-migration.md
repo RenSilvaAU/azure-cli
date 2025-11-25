@@ -81,3 +81,11 @@ Multiple test YAML files contain old AAD Graph recordings (`azure-graphrbac/0.60
 **2 functional issues remain**: GitHub issues #14880 and #20066 require feature work, not migration work.
 
 All other legacy AAD Graph references are intentional for backward compatibility.
+
+## Usage 
+
+Usage of AAD Graph has been gradually reduced:
+
+<img width="1265" height="712" alt="Screenshot 2025-11-25 at 6 23 07 pm" src="https://github.com/user-attachments/assets/72b5f608-dd40-4d2f-8707-94b739f97152" />
+
+
